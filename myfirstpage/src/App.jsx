@@ -1,10 +1,20 @@
-import React from 'react'
 
-const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+import A from "./A";
+import "./App.css";
+import B from "./B";
+const App=()=>{
+     let a =5;
+     let b=6;
+     let c=a+b;
 
-export default App
+     return (
+          <>
+               
+               <A/>
+               <B/>
+          </>
+
+     );
+};
+export default App;
 
