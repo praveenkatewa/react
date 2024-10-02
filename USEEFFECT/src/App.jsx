@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import './App.css'
+import Footer from './footer'
 import Home from './Home'
-import Footer from './Footer'
+import Xyx from './Xyz'
+import Xyz from './Xyz'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +18,11 @@ function App() {
        
       </div>
      <Home val={count} />
+     {/* <Home val={count} myname={"anuj"} /> */}
+     
+     {/* <Home val={{name:"aman"}} /> not working */}
      <Footer val={count}/>
+     
     </>
   )
 }
