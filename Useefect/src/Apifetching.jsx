@@ -1,42 +1,38 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from "react";
 
-function Apifetching() {
-     const [product,setproduct]=useState({});
+function ApiFetching() {
+  const [product, setproduct] = useState([]);
 
+  
+  async function FetchApi() {
+    const APIDATA = await fetch("https://dummyjson.com/products");
+    const JSON_DATA = await APIDATA.json();
 
+    setproduct(JSON_DATA.products);
+  }
+  console.log(product, ">>>>>>product<<<<<<<");
 
-     async function FetchApi() {
-          const APIDATA=  await fetch('https://dummyjson.com/products');
-          const JSON_DATA =await APIDATA.json(); 
-          setproduct(JSON_DATA.products)
-          
-     }
-     console.log(product,">>>>>>>>product<<<<<<<")
+  useEffect(() => {
+    FetchApi();
+  }, []);
 
-     useEffect(()=>{
-          
-          FetchApi()},
-
-     []);
-     
   return (
-  <>
-  {product.map((item)=>(
-     <div class="card" style={{width:"18rem"}}>
-     <div class="card-body">
+    <>
+    {product.map((item)=>(
+
+      <div class="card" style={{ width: "18rem" }}>
+        <img src={item.thumbnail} class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h6>{item.title}</h6>
           <p class="card-text">
-               some quick example text
+            {item.description}
           </p>
-     </div>
+        </div>
+      </div>
 
-     </div>
-
-  ))}
-    
-  </>
-);
+    ))}
+    </>
+  );
 }
 
-export default Apifetching;
+export default ApiFetching;
