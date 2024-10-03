@@ -1,0 +1,14 @@
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card{
+  flex-grow: 1;
+  margin: 5px;
+}
+
+.row{
+  width: 100% !important;
+}

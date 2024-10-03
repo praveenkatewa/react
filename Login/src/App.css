@@ -1,0 +1,49 @@
+/* src/App.css */
+
+.app-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.auth-form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-form button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.auth-form button:hover {
+  background-color: #45a049;
+}
+
+.auth-form a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+.message {
+  color: green;
+  font-weight: bold;
+}
