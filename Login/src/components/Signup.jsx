@@ -1,4 +1,4 @@
-// src/components/Signup.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ function Signup() {
       setMessage('Signup successful! Redirecting to login...');
       setTimeout(() => {
         navigate('/login');
-      }, 1500); // Redirect to login after 1.5 seconds
+      }, 1500);
     } else {
       setMessage('Please fill in both fields.');
     }

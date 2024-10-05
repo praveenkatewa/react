@@ -1,4 +1,4 @@
-// src/components/Login.jsx
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,14 +11,14 @@ function Login() {
     e.preventDefault();
     const { username, password } = loginData;
 
-    // Retrieve user data from localStorage
+  
     const storedUser = JSON.parse(localStorage.getItem('user'));
 
     if (storedUser && storedUser.username === username && storedUser.password === password) {
       setMessage('Login successful! Redirecting to the dashboard...');
       setTimeout(() => {
         navigate('/dashboard');
-      }, 1500); // Redirect to dashboard after 1.5 seconds
+      }, 1500); 
     } else {
       setMessage('Invalid username or password.');
     }
