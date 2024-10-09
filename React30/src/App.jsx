@@ -2,9 +2,9 @@ import React from 'react'
 // import Five from './Five'
 // import Three from './three'
 // import One from './One';
-// import Two from './Two';
+import Two from './Two';
 // import Four from './Four';
-import Six from './Six'
+// import Six from './Six'
 
 
 
@@ -12,11 +12,11 @@ function App() {
   return (
     <div>
       {/* <One/> */}
-      {/* <Two/> */}
+      <Two/>
       {/* <Three/> */}
       {/* <Four/> */}
       {/* <Five/> */}
-      <Six/>
+      {/* <Six/> */}
 
 
 
