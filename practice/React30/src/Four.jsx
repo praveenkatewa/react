@@ -1,3 +1,6 @@
+// build a list component to display a list of items.
+
+
 // import React from 'react'
 
 // function Four() {

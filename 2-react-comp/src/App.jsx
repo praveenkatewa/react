@@ -1,15 +1,25 @@
 
-import Button from './button';
 
-function App(){
+import Hello from "./Hello";
+import {KgButton} from "./KgButton";
+import Random from "./Random";
+
+function App (){
 
   return <div>
-    <h1>
-  this is react course
-  </h1>
-  <Button></Button>
-  </div>
+  <h1>
+    hi this is my first page
 
+  </h1>
+ <KgButton></KgButton>
+ <Hello></Hello>
+
+ <Random></Random>
+ <Random></Random>
+ <Random/>
+    
+
+  </div>
 
 }
 
