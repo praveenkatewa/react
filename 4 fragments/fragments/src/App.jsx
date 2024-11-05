@@ -1,10 +1,12 @@
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css'
-import Fooditems from "./components/Fooditems";
+import FoodItems from "./components/Fooditems";
 import ErrorMessage from "./components/ErrorMessage";
 
-  let foodItems =['Dal','Green vegetable',"Roti",'Salad',"milk"];
+function App(){
+
+  let foodItems =['Dal','Green vegetable',"Roti",'Salad',"milk",'rice'];
 
   // let foodItems =[];
 
@@ -17,7 +19,7 @@ import ErrorMessage from "./components/ErrorMessage";
 
   return (
   <>
-  <h1>Healthy Food</h1>
+  <h1 className="food-heading">Healthy Food</h1>
 
   {/* {foodItems.length ===0 ? <h3>i am still hungry</h3>:null} */}
 
@@ -27,14 +29,14 @@ import ErrorMessage from "./components/ErrorMessage";
 
 
 
-<ErrorMessage/>
-  <Fooditems/>
+<ErrorMessage  items={foodItems}/>
+  <FoodItems items={foodItems}/>
 
 
 
 </>
 
   );
-}
 
-export default App
+}
+export default App;
